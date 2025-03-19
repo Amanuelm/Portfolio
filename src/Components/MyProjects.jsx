@@ -2,7 +2,7 @@ import React from 'react'
 import './Myprojects.css'
 import cityWatch from '../assets/cityWatch.jpg'
 import but from '../assets/but.png'
-import yet from '../assets/yet.png'
+import yet from '../assets/Yet.png'
 import GitHubIcon from '@mui/icons-material/GitHub';
 function MyProjects() {
     const projects = [
