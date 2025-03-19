@@ -1,5 +1,5 @@
 import React from 'react'
-import './MyProjects.css'
+import './Myprojects.css'
 import cityWatch from '../assets/cityWatch.jpg'
 import but from '../assets/but.png'
 import yet from '../assets/yet.png'
