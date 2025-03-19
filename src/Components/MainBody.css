@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+.firstmain{
+    height : 100vh;
+    width : 100%;
+    background: #1e5ca8;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.noise-overlay {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200%;
+    background: transparent
+      url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+    background-repeat: repeat;
+    animation: grain 8s steps(10) infinite;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+  }
+  @keyframes grain {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    10% {
+      transform: translate(-5%, -10%);
+    }
+    20% {
+      transform: translate(-15%, 5%);
+    }
+    30% {
+      transform: translate(7%, -25%);
+    }
+    40% {
+      transform: translate(-5%, 25%);
+    }
+    50% {
+      transform: translate(-15%, 10%);
+    }
+    60% {
+      transform: translate(15%, 0%);
+    }
+    70% {
+      transform: translate(0%, 15%);
+    }
+    80% {
+      transform: translate(3%, 35%);
+    }
+    90% {
+      transform: translate(-10%, 10%);
+    }
+  }
+.name{
+    font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 9vw;
+    color:#f8d30c;
+    
+}
+.othertext{
+    font-family: 'Inter', sans-serif;
+  font-weight: 400;
+    color:#ffffff;
+    text-align: center;
+    font-size:30px;
+}
+.maintext {
+    margin-bottom: 300px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Start slightly below */
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.linkh{
+    text-decoration: none; /* Removes the underline */
+  color: #f8d30c;
+}
+.iconholderholder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.iconholder{
+  background-color: #007bff; 
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  height: 60px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding-right: 10px;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .name {
+    font-size: 12vw; /* Increase font size for smaller screens */
+  }
+
+  .othertext {
+    font-size: 20px; /* Reduce font size for smaller screens */
+  }
+
+  .maintext {
+    margin-bottom: 150px; /* Reduce margin for smaller screens */
+  }
+
+  .iconholder {
+    height: 50px; /* Reduce icon holder size */
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+    font-size: 15vw; /* Further increase font size for very small screens */
+  }
+
+  .othertext {
+    font-size: 16px; /* Further reduce font size */
+  }
+
+  .iconholderholder {
+    flex-direction: column; /* Stack icons vertically on very small screens */
+  }
+
+  .iconholder {
+    margin: 5px; /* Reduce margin between icons */
+  }
+}

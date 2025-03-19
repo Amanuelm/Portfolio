@@ -1,0 +1,97 @@
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    height:100%;
+    width: 25%;
+    margin-left: 40px;
+    transition: transform 0.3s ease;
+  }
+  .scroll-conatiner {
+    margin-top: 40px;
+    height: 50%; 
+    width:100%;
+    overflow-x: auto; 
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px;
+}
+  .project-image {
+    width: 100%;
+    height: 50%;
+    object-fit:contain;
+    border-radius: 8px;
+  }
+  
+  .project-title {
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 12px;
+  }
+  
+  .project-description {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-top: 8px;
+  }
+  
+  .tech-stack {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  
+  .tech-item {
+    background: rgba(255, 255, 255, 0.2);
+    color: rgb(237, 237, 237);
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 0.8rem;
+  }
+.myprojects{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient( to bottom, #6DD5FA,#2980B9);
+    
+}  
+.project-card:hover {
+  transform: translateY(-10px); 
+}
+.alltext{
+    margin-top: 70px;
+    margin-left: 100px;
+    align-self: center;
+    text-align: center;
+    color: #ffffff;
+    font-size: 25px;
+}
+.iconlinkdin{
+  color: #ffffff;
+}
+.iconlinkdin:hover{
+  color: #0e76a8;
+}
+@media (max-width: 480px) {
+  .project-card {
+    width: 80%; /* Full width for very small screens */
+    margin-left: 10px;
+  }
+
+  .alltext {
+    margin-left: 20px; /* Further reduce margin */
+    font-size: 18px;
+  }
+
+  .scroll-conatiner {
+    flex-direction: column; /* Stack cards vertically on very small screens */
+    align-items: center;
+  }
+}
