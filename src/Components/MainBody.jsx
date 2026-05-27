@@ -1,27 +1,22 @@
 import React from 'react'
 import './MainBody.css'
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
 function MainBody() {
   return (
-   
-    <div className='firstmain'> <div class="noise-overlay"></div>
-      <div className='maintext'>
-        <h1 className='name'>Amanuel Mehari</h1>
-        <h6 className='othertext'>Hello i am a Software Engineer who graduated from<br/> <a href="https://hilcoe.net/" target="_blank" className="linkh">HiLCoE School of Computer Science and Technology.</a><br></br>
-        I am Passionate about web and mobile development. </h6> 
-      <div className='iconholderholder'>
-      <a href="https://github.com/Amanuelm" target="_blank" className="iconholder">
-      <LinkedInIcon className='icon' sx={{ fontSize: 35 }}/>
-      </a>
-      
-      <a href="https://github.com/Amanuelm" target="_blank" className="iconholder">
-      <GitHubIcon className='icon' sx={{ fontSize: 30 }}/>
-      </a>
+    <section className='hero-section'>
+      <div className='hero-content'>
+        <p className="hero-subtitle">Hi, my name is</p>
+        <h1 className='hero-title'>Amanuel Mehari.</h1>
+        <h2 className='hero-tagline'>I build things for the web and mobile.</h2>
+        <p className='hero-description'>
+          I am a Software Engineer and recent graduate from <a href="https://hilcoe.net/" target="_blank" rel="noopener noreferrer" className="hero-link">HiLCoE School of Computer Science and Technology</a>.<br/>
+          I am passionate about creating modern, responsive web and mobile applications with excellent user experiences.
+        </p> 
+        <div className='hero-cta-container'>
+          <a href="#projects" className="btn-primary">View My Work</a>
+        </div>
       </div>
-      </div>
-    </div>
-    
+    </section>
   )
 }
 

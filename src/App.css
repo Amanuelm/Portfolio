@@ -1,8 +1,36 @@
-.applay{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #121212;
+  --text-primary: #f0f0f0;
+  --text-secondary: #a0a0a0;
+  --accent-blue: #00f0ff;
+  --accent-purple: #8a2be2;
+  --glass-bg: rgba(25, 25, 25, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --font-main: 'Outfit', sans-serif;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
 }
-body{
-  background-color: #1e5ca8;;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: radial-gradient(circle at 15% 50%, rgba(138, 43, 226, 0.12), transparent 30%),
+                    radial-gradient(circle at 85% 30%, rgba(0, 240, 255, 0.08), transparent 30%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

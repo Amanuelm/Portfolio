@@ -1,29 +1,35 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Header.css'
-import logo from "../assets/logo.jpg";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Terminal from '@mui/icons-material/Terminal';
+
 function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="header1">
-        <Terminal className='icon' sx={{ fontSize: 35 }}/>
-        <h2 className='textname'>Coding Portfolio</h2>
-       <div className='icons'>
-       <a href="https://github.com/Amanuelm" target="_blank" className="iconlink">
-
-       <GitHubIcon className='icon' sx={{ fontSize: 30 }}/>
-
-       </a>
-
-       <a href="https://www.linkedin.com/in/amanuel-mehari-83a580243/" target="_blank" className="iconlink">
-
-        <LinkedInIcon className='icon' sx={{ fontSize: 35 }}/>
-
-       </a>
-      
-       </div>
-  </div>
+    <header className={`header1 ${scrolled ? 'scrolled' : ''}`}>
+      <div className="header-container">
+        <div className="logo-section">
+          <Terminal className='header-icon logo-icon' sx={{ fontSize: 32 }}/>
+          <h2 className='textname'>Amanuel<span className="accent-text">.dev</span></h2>
+        </div>
+        <div className='icons'>
+          <a href="https://github.com/Amanuelm" target="_blank" rel="noopener noreferrer" className="iconlink" aria-label="GitHub">
+            <GitHubIcon className='header-icon' sx={{ fontSize: 28 }}/>
+          </a>
+          <a href="https://www.linkedin.com/in/amanuel-mehari-83a580243/" target="_blank" rel="noopener noreferrer" className="iconlink" aria-label="LinkedIn">
+            <LinkedInIcon className='header-icon' sx={{ fontSize: 30 }}/>
+          </a>
+        </div>
+      </div>
+    </header>
   )
 }
 

@@ -1,58 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 .header1 {
-    position: sticky;
-    top: 0;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    z-index: 1; 
-    backdrop-filter: blur(10px); /* Adds a frosted glass effect */
-    
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all var(--transition-normal);
+  padding: 20px 0;
+  background: transparent;
 }
 
-.imageholder {
-    border-radius: 100px;
-    height: 80%;  /* Ensure it takes full height of header */
-    width: 56px; /* Set a reasonable width */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 15px;
-    overflow: hidden; /* Hide overflow */
+.header1.scrolled {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 15px 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-    height: 100%;
-    width: 100%; /* Maintain aspect ratio */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
 }
-.textname{
-    margin:10px;
-    margin-left: 15px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    color:#f8d30c;
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.icon{
-    margin-left: 10px;
-    margin-bottom: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center ;
-    height: 100%;
-    color: #f8d30c;
+
+.textname {
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 0;
+  letter-spacing: 0.5px;
 }
-.icons{   
-    margin-left: auto;
-    margin-right: 20px;
-    display: flex;
-    align-items: center;
-    
+
+.accent-text {
+  color: var(--accent-blue);
 }
-.iconlink{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center ;
+
+.logo-icon {
+  color: var(--accent-purple);
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.iconlink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  padding: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.iconlink:hover {
+  color: var(--accent-blue);
+  transform: translateY(-3px);
+  background: rgba(0, 240, 255, 0.1);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+}
+
+.header-icon {
+  font-size: 28px;
 }
